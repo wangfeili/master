@@ -20,5 +20,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('^hello/$',views.hello) #添加hello的路径配置
+    url('^hello/$',views.hello),#添加hello的路径配置
+    url('^index/$',views.index),
+    url(r'^login_action/$',views.login_action)
 ]
