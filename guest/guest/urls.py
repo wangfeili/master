@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url('^hello/$',views.hello),#添加hello的路径配置
     url('^index/$',views.index),
-    url(r'^login_action/$',views.login_action)
+    url(r'^login_action/$',views.login_action),
+    url(r'^event_manage/$',views.event_manage)
 ]
