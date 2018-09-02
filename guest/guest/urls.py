@@ -21,7 +21,9 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('^hello/$',views.hello),#添加hello的路径配置
+    url(r'^$',views.index),
     url('^index/$',views.index),
+    url(r'^accounts/login/$',views.index),
     url(r'^login_action/$',views.login_action),
     url(r'^event_manage/$',views.event_manage)
 ]
