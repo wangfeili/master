@@ -14,12 +14,12 @@ class Event(models.Model):
         return self.name
 
 class Guest(models.Model):
-    event = models.ForeignKey(Event)  #
-    realname = models.CharField(max_length=64)
-    phone = models.CharField(max_length=16)
-    email = models.EmailField()
-    sign = models.BooleanField()
-create_time = models.DateTimeField(auto_now=True)
+    event = models.ForeignKey(Event)  #发布会关联id
+    realname = models.CharField(max_length=64)  #姓名
+    phone = models.CharField(max_length=16)  #手机号
+    email = models.EmailField()  #邮箱
+    sign = models.BooleanField()  #签到状态
+create_time = models.DateTimeField(auto_now=True)  #创建时间（自动获取当前时间）
 
 class Meta:
     unique_together = ("event","phone")
