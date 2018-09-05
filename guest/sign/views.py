@@ -16,6 +16,7 @@ def login_action(request):
         password = request.POST.get('password','')
         user = auth.authenticate(username = username,password = password)
         if user is not None:
+            auth.login(request,user)
             response = HttpResponseRedirect('/event_manage/')
             # response.set_cookie('user',username,3600) #添加浏览器cookie
             request.session['user'] = username #将session记录到浏览器
