@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8a9f35-ec3c-4736-9749-79410b1cb8f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guest/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/guest/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/guest/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sign/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sign/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="ba8a9f35-ec3c-4736-9749-79410b1cb8f4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +45,7 @@
     <session id="624022932">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
@@ -63,13 +56,13 @@
         <counts>
           <entry key="html" value="344" />
           <entry key="py" value="1203" />
-          <entry key="txt" value="5" />
+          <entry key="txt" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="344" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="PLAIN_TEXT" value="15" />
           <entry key="Python" value="1203" />
         </counts>
       </usages-collector>
@@ -382,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536164414570</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改数据库">
+      <created>1536250426965</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1536250426965</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -413,7 +413,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加注释" />
     <MESSAGE value="添加注释2" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加注释2" />
+    <MESSAGE value="修改数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改数据库" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/study/Python/Lib/site-packages/django/http/__init__.py">
