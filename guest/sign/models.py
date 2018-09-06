@@ -19,7 +19,7 @@ class Guest(models.Model):
     phone = models.CharField(max_length=16)  #手机号
     email = models.EmailField()  #邮箱
     sign = models.BooleanField()  #签到状态
-create_time = models.DateTimeField(auto_now=True)  #创建时间（自动获取当前时间）
+    create_time = models.DateTimeField(auto_now=True)  #创建时间（自动获取当前时间）
 
 class Meta:
     unique_together = ("event","phone")
