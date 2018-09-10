@@ -1,12 +1,89 @@
-<html lang="zh-CN">
-<head>
-    {% load bootstrap3 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
-    <title>Guest Manage</title>
-</head>
+<!--<html lang="zh-CN">-->
+<!--<head>-->
+    <!--{% load bootstrap3 %}-->
+    <!--{% bootstrap_css %}-->
+    <!--{% bootstrap_javascript %}-->
+    <!--<title>Guest Manage</title>-->
+<!--</head>-->
 
-<body role="document">
+<!--<body role="document">-->
+    <!--&lt;!&ndash; 导航栏 &ndash;&gt;-->
+    <!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
+      <!--<div class="container">-->
+        <!--<div class="navbar-header">-->
+          <!--<a class="navbar-brand" href="/event_manage/">Guest Manage System</a>-->
+        <!--</div>-->
+        <!--<div id="navbar" class="collapse navbar-collapse">-->
+          <!--<ul class="nav navbar-nav">-->
+            <!--<li class="active"><a href="#">发布会</a></li>   #设置页面导航栏，表示当前菜单处于选中状态-->
+            <!--<li><a href="/guest_manage/">嘉宾</a></li>    #跳转到嘉宾管理页-->
+          <!--</ul>-->
+          <!--<ul class="nav navbar-nav navbar-right">-->
+           <!--<li><a href="#">{{user}}</a></li>    #{{}}为Django的模板语音标签，用于定义显示变量-->
+           <!--<li><a href="/logout/">退出</a></li>   #定义退出路径-->
+         <!--</ul>-->
+        <!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+      <!--</div>-->
+    <!--</nav>-->
+
+    <!--<div class="container theme-showcase" role="main">-->
+
+      <!--&lt;!&ndash;查询发布会&ndash;&gt;-->
+      <!--<div class="page-header" style="margin-top: 80px;">-->
+        <!--<div id="navbar" class="navbar-collapse collapse" style="float:left;">-->
+          <!--<form class="navbar-form" method="get" action="/search_name/">-->
+            <!--<div class="form-group">-->
+              <!--<input name="name" type="text" placeholder="名称" class="form-control">-->
+            <!--</div>-->
+            <!--<button type="submit" class="btn btn-success">搜索</button>-->
+          <!--</form>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash;发布会表单&ndash;&gt;-->
+      <!--<div class="row" >-->
+        <!--<div class="col-md-6" style="width: 900px;">-->
+          <!--<table class="table table-striped">-->
+            <!--<thead>-->
+              <!--<tr>-->
+                <!--<th>id</th>-->
+                <!--<th>名称</th>-->
+                <!--<th>地址</th>-->
+                <!--<th>时间</th>-->
+                <!--<th>人数</th>-->
+                <!--<th>状态</th>-->
+                <!--<th>签到</th>-->
+              <!--&lt;!&ndash;  <th>签到正式</th> &ndash;&gt;-->
+              <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+              <!--{% for event in events %}-->
+                <!--<tr>-->
+                  <!--<td>{{ event.id }}</td>-->
+                  <!--<td>{{ event.name }}</td>-->
+                  <!--<td>{{ event.address }}</td>-->
+                  <!--<td>{{ event.start_time | date:"Y-m-d H:i:s" }}</td>-->
+                  <!--<td>{{ event.limit }}</td>-->
+                  <!--<td>{{ event.status }}</td>-->
+                  <!--<td><a href="/sign_index/{{ event.id }}/"  target="{{ event.id }}_blank">sign</a></td>-->
+                <!--&lt;!&ndash;  <td><a href="/sign_index2/{{ event.id }}/"  target="{{ event.id }}_blank">sign_web</a></td>-->
+                <!--&ndash;&gt;-->
+                <!--</tr>-->
+             <!--{% endfor %}-->
+             <!--{{ hint }}-->
+            <!--</tbody>-->
+          <!--</table>-->
+        <!--</div>-->
+
+      <!--</div>-->
+
+<!--</body>-->
+<!--</html>>-->
+
+
+{% extends "base.html" %}
+{% block content %}
+
     <!-- 导航栏 -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -15,12 +92,12 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">发布会</a></li>   #设置页面导航栏，表示当前菜单处于选中状态
-            <li><a href="/guest_manage/">嘉宾</a></li>    #跳转到嘉宾管理页
+            <li class="active"><a href="#">发布会</a></li>
+            <li><a href="/guest_manage/">嘉宾</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-           <li><a href="#">{{user}}</a></li>    #{{}}为Django的模板语音标签，用于定义显示变量
-           <li><a href="/logout/">退出</a></li>   #定义退出路径
+           <li><a href="#">{{user}}</a></li>
+           <li><a href="/logout/">退出</a></li>
          </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -38,7 +115,7 @@
             <button type="submit" class="btn btn-success">搜索</button>
           </form>
         </div><!--/.navbar-collapse -->
-        <div "float:right;">
+        <div style="float:right;">
           <button type="submit" class="btn btn-primary" onclick="window.location.href='/add_event/'" style="margin-top: 8px;">添加</button>
         </div>
       </div>
@@ -77,10 +154,44 @@
             </tbody>
           </table>
         </div>
-
       </div>
 
-    </body>
-</html>>
+    </div>
 
 {% endblock %}
+
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+        <!--<div class="container-fluid">-->
+          <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+              <!--<span class="sr-only">Toggle navigation</span>-->
+              <!--<span class="icon-bar"></span>-->
+              <!--<span class="icon-bar"></span>-->
+              <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">Project name</a>-->
+          <!--</div>-->
+          <!--<div id="navbar" class="navbar-collapse collapse">-->
+            <!--<ul class="nav navbar-nav">-->
+              <!--<li class="active"><a href="#">Home</a></li>-->
+              <!--<li><a href="#">About</a></li>-->
+              <!--<li><a href="#">Contact</a></li>-->
+              <!--<li class="dropdown">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                <!--<ul class="dropdown-menu">-->
+                  <!--<li><a href="#">Action</a></li>-->
+                  <!--<li><a href="#">Another action</a></li>-->
+                  <!--<li><a href="#">Something else here</a></li>-->
+                  <!--<li role="separator" class="divider"></li>-->
+                  <!--<li class="dropdown-header">Nav header</li>-->
+                  <!--<li><a href="#">Separated link</a></li>-->
+                  <!--<li><a href="#">One more separated link</a></li>-->
+                <!--</ul>-->
+              <!--</li>-->
+            <!--</ul>-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+
+            <!--</ul>-->
+          <!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+        <!--</div>&lt;!&ndash;/.container-fluld &ndash;&gt;-->
+      <!--</nav>-->

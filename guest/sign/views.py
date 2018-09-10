@@ -32,3 +32,9 @@ def event_manage(request):
     # username = request.COOKIES.get('user','') #读取浏览器cookie
     username = request.session.get('user','') #读取浏览器session
     return render(request,"event_manage.html",{"user":username,"events":event_list})
+
+def search_name(request):
+    username = request.session.get('user','')
+    search_name = request.GET.get("name","")
+    event_list = Event.objects.filter(name__contains=search_name)
+    return render(request,"event_manage.html",{"user":username,"events":event_list})
