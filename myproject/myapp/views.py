@@ -1,11 +1,11 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
-import json
-from django.http import HttpResponse,JsonResponse
-from myproject.myapp.models import Book
 from django.core import serializers
+import requests
+import json
 
-from models import Book
+from myapp.models import Book
 
 
 @require_http_methods(["GET"])
