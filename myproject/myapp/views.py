@@ -5,6 +5,8 @@ from django.http import HttpResponse,JsonResponse
 from myproject.myapp.models import Book
 from django.core import serializers
 
+from models import Book
+
 
 @require_http_methods(["GET"])
 def add_book(request):

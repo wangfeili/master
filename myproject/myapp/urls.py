@@ -1,5 +1,5 @@
 from django.conf.urls import url, include
-from myproject.myapp import views
+from myapp import views
 
 urlpatterns = [
 url(r'add_book$', views.add_book, ),
