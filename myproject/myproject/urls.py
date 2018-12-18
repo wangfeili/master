@@ -22,5 +22,6 @@ from django.conf.urls import url,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/', include(myapp.urls)),
+    url(r'^mconfig',include('mconfig.html')),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
 ]

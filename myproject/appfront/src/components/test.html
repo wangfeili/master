@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单案例</title>
+    <link rel="stylesheet" href="../css/formcss.css">
+</head>
+<body>
+ <form action="">
+     <fieldset>
+         <legend>学生档案</legend>
+         <label for="userName">姓名：</label>
+         <input type="text" name="userName" placeholder="请输入用户名" id="userName">
+         <label for="userPhone">手机号码：</label>
+         <input type="tel" name="userPhone" id="userPhone" pattern="^1\d{10}$">
+         <label for="userEmail">邮箱地址：</label>
+         <input type="email" name="userEmail" id="userEmail" required >
+         <label for="col">所属学院：</label>
+         <input type="text" id="col" list="School" placeholder="请选择">
+         <datalist id="School">
+             <option value="前端学院"></option>
+             <option value="Java学院"></option>
+             <option value="C++学院"></option>
+             <option value="人工智能学院"></option>
+         </datalist>
+         <label for="score">入学成绩：</label>
+         <input type="number" max="100" min="0" id="score">
+         <label for="level">基础水平：</label>
+          <meter id="level" value="0" max="100" min="0" low="59" high="90"></meter>
+          <label for="inTime">入学日期：</label>
+         <input type="date" id="inTime">
+         <label for="leaveTime">毕业日期</label>
+         <input type="date" id="leaveTime">
+         <input type="submit">
+     </fieldset>
+ </form>
+
+<script>
+    document.getElementById("score").oninput = function () {
+        document.getElementById("level").value=this.value;
+
+    }
+    document.getElementById("userPhone").oninvalid=function () {
+        this.setCustomValidity("请输入11位手机号！")
+    }
+</script>
+</body>
+</html>
+
